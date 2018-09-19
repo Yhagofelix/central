@@ -112,7 +112,7 @@ public class TelaDeSoma extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setText("-");
+        jLabel5.setText("/");
 
         lblSoma3.setText("0");
         lblSoma3.setToolTipText("resultado da divisao");
