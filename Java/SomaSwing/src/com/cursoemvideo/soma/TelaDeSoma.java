@@ -43,6 +43,11 @@ public class TelaDeSoma extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         lblSoma2 = new javax.swing.JLabel();
         btnSoma2 = new javax.swing.JButton();
+        txtN7 = new javax.swing.JTextField();
+        txtN8 = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        lblSoma3 = new javax.swing.JLabel();
+        btnSoma3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -101,6 +106,24 @@ public class TelaDeSoma extends javax.swing.JFrame {
             }
         });
 
+        txtN8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtN8ActionPerformed(evt);
+            }
+        });
+
+        jLabel5.setText("/");
+
+        lblSoma3.setText("0");
+        lblSoma3.setToolTipText("resultado da divisao");
+
+        btnSoma3.setText("=");
+        btnSoma3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSoma3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -141,7 +164,17 @@ public class TelaDeSoma extends javax.swing.JFrame {
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(btnSoma1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(lblSoma1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(lblSoma1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(txtN7, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jLabel5)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(txtN8, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(btnSoma3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(lblSoma3, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(18, 18, 18))
         );
         layout.setVerticalGroup(
@@ -170,7 +203,14 @@ public class TelaDeSoma extends javax.swing.JFrame {
                     .addComponent(btnSoma2)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblSoma2))
-                .addContainerGap(117, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtN7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtN8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSoma3)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblSoma3))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
 
         pack();
@@ -214,6 +254,18 @@ public class TelaDeSoma extends javax.swing.JFrame {
        lblSoma2.setText(Integer.toString(s));
     }//GEN-LAST:event_btnSoma2ActionPerformed
 
+    private void txtN8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtN8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtN8ActionPerformed
+
+    private void btnSoma3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSoma3ActionPerformed
+        // TODO add your handling code here:
+        float n7 = Float.parseFloat(txtN7.getText());
+        float n8 = Float.parseFloat(txtN8.getText());
+        float s = n7 / n8;
+       lblSoma3.setText(Float.toString(s));
+    }//GEN-LAST:event_btnSoma3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -253,18 +305,23 @@ public class TelaDeSoma extends javax.swing.JFrame {
     private javax.swing.JButton btnSoma;
     private javax.swing.JButton btnSoma1;
     private javax.swing.JButton btnSoma2;
+    private javax.swing.JButton btnSoma3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel lblSoma;
     private javax.swing.JLabel lblSoma1;
     private javax.swing.JLabel lblSoma2;
+    private javax.swing.JLabel lblSoma3;
     private javax.swing.JTextField txtN1;
     private javax.swing.JTextField txtN2;
     private javax.swing.JTextField txtN3;
     private javax.swing.JTextField txtN4;
     private javax.swing.JTextField txtN5;
     private javax.swing.JTextField txtN6;
+    private javax.swing.JTextField txtN7;
+    private javax.swing.JTextField txtN8;
     // End of variables declaration//GEN-END:variables
 }
