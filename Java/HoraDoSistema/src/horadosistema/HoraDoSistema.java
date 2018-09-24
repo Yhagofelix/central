@@ -33,9 +33,10 @@ public class HoraDoSistema {
        {
           Runtime.getRuntime().exec("cmd.exe /c start dxdiag.exe");
        }
-       catch(IOException iOException)
+          catch(IOException iOException)
        {
-    }
+           System.out.println("Erro ");
+       }
     }
 }
     
